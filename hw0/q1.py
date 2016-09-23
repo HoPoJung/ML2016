@@ -16,6 +16,13 @@ with open(filename, 'r') as file:
 				data.append(float(part[column]))
 
 dataSorted = sorted(data)
-print data
+
+outputFile = open("ans1.txt", 'w')
+
+for char in range(len(data)):
+	outputFile.write(str(data[char]))
+	outputFile.write(',')
+outputFile.write('\n')
+outputFile.close()
 
 
